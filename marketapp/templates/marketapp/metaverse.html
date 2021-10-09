@@ -1,0 +1,57 @@
+{% extends 'marketapp/base.html' %}
+{% load static %}
+{% block content %}
+
+        <!-- Header-->
+        <header class="bg-dark py-4">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start">
+                            <h1 class="display-5 fw-bolder text-white mb-2">메타버스 온라인 플리마켓</h1>
+                            <p class="lead fw-normal text-white-50 mb-4 my-3">제페토 가상 공간 안에서 우리 지역 사람들과 소통해봐요!</p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start my-4">
+                                <a style="background: #fd7e14;" class="btn text-white btn-lg px-4 me-sm-3 col-5" href="#features">지금 접속하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="{% static 'marketapp/img/metaverse.png' %}" alt="..." /></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Features section-->
+        <section class="py-5 border-bottom" id="features">
+            <div class="container px-5 my-5">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div style="background: #fd7e14;" class="feature bg-gradient text-white rounded-3 mb-3"><i class="bi bi-basket"></i></div>
+                        <h2 class="h4 fw-bolder my-2">AI 추천 상품 찾아보기</h2>
+                        <p class="my-3">우리 지역 작가님들의 상품을 분류하고 유사도를 분석하여 고객님에게 맞는 상품을 추천해드립니다!</p>
+                        <a class="text-decoration-none" style="color: orangered;" href="#">
+                            바로가기
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div style="background: #fd7e14;" class="feature bg-gradient text-white rounded-3 mb-3"><i class="bi bi-globe2"></i></div>
+                        <h2 class="h4 fw-bolder my-2">메타버스 온라인 플리마켓</h2>
+                        <p class="my-3">제페토 가상 공간 안에서 우리 지역 사람들과 소통해봐요!</p>
+                        <a class="text-decoration-none" style="color: orangered;" href="{% url 'marketapp:metaverse' %}">
+                            바로가기
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <div style="background: #fd7e14;" class="feature bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-left-dots"></i></div>
+                        <h2 class="h4 fw-bolder my-2">지역 챗봇 알림 서비스</h2>
+                        <p class="my-3">나의 지역에서 열리는 플리마켓 정보를 알림으로 받아볼 수 있어요!</p>
+                        <a class="text-decoration-none" style="color: orangered;" href="#">
+                            바로가기
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

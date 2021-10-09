@@ -7,3 +7,9 @@ def landing(request):
         request,
         'marketapp/landing.html'
     )
+
+def metaverse(request):
+    return render(
+        request,
+        'marketapp/metaverse.html'
+    )
