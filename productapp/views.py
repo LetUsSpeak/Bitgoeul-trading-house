@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from productapp.models import Product
 
@@ -9,6 +9,10 @@ from productapp.models import Product
 class ProductList(ListView):
     model = Product
     ordering = '-pk'
+
+class ProductDetail(DetailView):
+    model = Product
+
 
 # def index(request):
 #     # 가장 최근에 등록된 상품부터 나열
@@ -22,13 +26,13 @@ class ProductList(ListView):
 #         }
 #     )
 
-def single_product_page(request, pk):
-    product = Product.objects.get(pk=pk)
-
-    return render(
-        request,
-        'productapp/single_product_page.html',
-        {
-            'product': product,
-        }
-    )
+# def single_product_page(request, pk):
+#     product = Product.objects.get(pk=pk)
+#
+#     return render(
+#         request,
+#         'productapp/product_detail.html',
+#         {
+#             'product': product,
+#         }
+#     )
