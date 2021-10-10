@@ -1,9 +1,28 @@
 {% extends 'eventapp/base.html' %}
 {% load static %}
+{% block scripts %}
+  <script src="{% static 'eventapp/js/main.js' %}" defer></script>
+{% endblock scripts %}
 {% block content %}
   {% for obj in object_list %}
-    <div>
-      <a href="{{ obj.get_absolute_url }}">{{ obj.name }}</a>
+    <div class="col">
+      <div class="card shadow-sm" onclick="location.href='{{ obj.get_absolute_url }}'">
+        <img style="object-fit: cover" class="bd-placeholder-img card-img-top" width="100%" height="300" src="{{ obj.market_image.url }}" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+
+        <div class="card-body">
+            <p class="card-text fw-bolder">{{ obj.name }}</p>
+          <p class="card-text">{{ obj.info | truncatewords:30 }}</p>
+          <div id="event-box"> {{ obj.when|date:"M d,  Y H:m:s" }}</div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <!-- <button type="button" class="btn btn-sm btn-outline-secondary">예약</button> -->
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-secondary px-3">예약</button>
+          </div>
+        </div>
+      </div>
     </div>
+
   {% endfor %}
 {% endblock %}

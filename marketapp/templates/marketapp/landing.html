@@ -11,7 +11,7 @@
                             <p class="lead text-white-50 mb-4 my-4">플리마켓 이름</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center my-5">
                                 <a style="background: #fd7e14;" class="btn text-white btn-lg px-4 me-sm-3" href="#registerMarket">마켓 등록하기</a>
-                                <a class="btn btn-outline-light btn-lg px-4" href="#!">마켓 둘러보기</a>
+                                <a class="btn btn-outline-light btn-lg px-4" href="{% url 'eventapp:event-list' %}">마켓 둘러보기</a>
                             </div>
                         </div>
                     </div>
@@ -90,11 +90,6 @@
                                 <input class="form-control" id="market-term" type="tel" placeholder="Ex) 2021.10.14-2021.10.21" data-sb-validations="required" />
                                 <label for="market-term">마켓 운영 기간</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">마켓 운영 기간을 입력해주세요.</div>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="market-location" type="tel" placeholder="Ex) 광주광역시 동구 충장로" data-sb-validations="required" />
-                                <label for="market-location">마켓 위치</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">마켓 위치 정보를 입력해주세요.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
