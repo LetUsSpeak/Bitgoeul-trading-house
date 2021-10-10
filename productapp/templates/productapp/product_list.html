@@ -1,4 +1,5 @@
 {% extends 'productapp/base.html' %}
+{% load static %}
 {% block content %}
 
     <!-- Page content-->
@@ -43,9 +44,13 @@
 
                     {% for p in product_list %}
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div style="overflow: hidden;" class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            {% if p.head_image %}
+                                <img style="width:auto; height:150px; object-fit: cover" class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} head image" />
+                            {% else %}
+                                <img style="width:auto; height:150px; object-fit: cover" class="card-img-top" src="{% static 'productapp/img/no_image.png' %}" alt="no image" />
+                            {% endif %}
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
