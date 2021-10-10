@@ -43,7 +43,7 @@
 
 
                     {% for p in product_list %}
-                    <div class="col mb-5">
+                    <div class="col mb-5" onclick="location.href='{{ p.get_absolute_url }}'">
                         <div style="overflow: hidden;" class="card h-100">
                             <!-- Product image-->
                             {% if p.head_image %}

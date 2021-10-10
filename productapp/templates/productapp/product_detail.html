@@ -1,11 +1,16 @@
 {% extends 'productapp/base.html' %}
+{% load static %}
 {% block content %}
 
         <!-- Product section-->
         <section class="py-2">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
+                    {% if product.head_image %}
                     <div class="col-md-4"><img class="card-img-top mb-5 mb-md-0" src="{{ product.head_image.url }}" alt="..." /></div>
+                    {% else %}
+                    <div class="col-md-4"><img class="card-img-top mb-5 mb-md-0" src="{% static 'productapp/img/no_image.png' %}" alt="..." /></div>
+                    {% endif %}
                     <div class="col-md-7">
                         <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
                         <div class="fs-5 mb-4">
