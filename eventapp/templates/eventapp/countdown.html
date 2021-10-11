@@ -4,18 +4,40 @@
   <script src="{% static 'eventapp/js/main.js' %}" defer></script>
 {% endblock scripts %}
 
-{% block content %}
-  <div class="row">
-    <div class="col-5">
-      <div>{{ object.name }} will take place:</div>
-    </div>
-    <div class="col-7">
-      <div id="event-box"> {{ object.when|date:"M d,  Y H:m:s" }}</div>
-    </div>
-  </div>
+{% block content2 %}
 
-  <div>Time left: </div>
-  <div id="countdown-box" class="text-center mt-3 h1">
-    <div class="spinner-border" role="status"></div>
-  </div>
-{% endblock content %}
+<!-- Product section-->
+        <section class="py-2">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    {% if object.market_image %}
+                    <div class="col-md-4"><img class="card-img-top mb-5 mb-md-0" src="{{ object.market_image.url }}" alt="..." /></div>
+                    {% else %}
+                    <div class="col-md-4"><img class="card-img-top mb-5 mb-md-0" src="{% static 'productapp/img/no_image.png' %}" alt="..." /></div>
+                    {% endif %}
+                    <div class="col-md-8">
+                        <h1 class="display-7 fw-bolder">{{ object.name }}</h1>
+                        <div class="fs-5 mb-4 my-4 fw-bold d-flex align-content-center">
+                            <p id="event-box">플리마켓 오픈 | {{ object.when|date:"M d,  Y H:m:s" }}</p>
+                        </div>
+                        <div class="my-5">
+                          <p class="lead">{{ object.info }}</p>
+                        </div>
+                      <div id="countdown-box" class="text-center mt-2 h3 my-5">
+                        <div class="spinner-border" role="status"></div>
+                      </div>
+
+                      <button class="col text-center btn btn-dark flex-shrink-0 px-3 py-3" type="button">
+                                <i class="bi-cart-fill me-1"></i>
+                                참여하기
+                      </button>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+{% endblock content2 %}
