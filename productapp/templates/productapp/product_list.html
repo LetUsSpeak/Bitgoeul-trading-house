@@ -43,37 +43,38 @@
 
 
                     {% for p in product_list %}
-                    <div class="col mb-5" onclick="location.href='{{ p.get_absolute_url }}'">
-                        <div style="overflow: hidden;" class="card h-100">
-                            <!-- Product image-->
-                            {% if p.head_image %}
-                                <img style="width:auto; height:150px; object-fit: cover" class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} head image" />
-                            {% else %}
-                                <img style="width:auto; height:150px; object-fit: cover" class="card-img-top" src="{% static 'productapp/img/no_image.png' %}" alt="no image" />
-                            {% endif %}
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">{{ p.name }}</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                            <div class="col mb-5" onclick="location.href='{{ p.get_absolute_url }}'">
+                                <div style="overflow: hidden;" class="card h-100">
+                                    <!-- Product image-->
+                                    {% if p.head_image %}
+                                        <img style="width:auto; height:150px; object-fit: cover" class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} head image" />
+                                    {% else %}
+                                        <img style="width:auto; height:150px; object-fit: cover" class="card-img-top" src="{% static 'productapp/img/no_image.png' %}" alt="no image" />
+                                    {% endif %}
+                                    <!-- Product details-->
+                                    <div class="card-body p-4">
+                                        <div class="text-center">
+                                            <!-- Product name-->
+                                            <h5 class="fw-bolder">{{ p.name }}</h5>
+                                            <!-- Product reviews-->
+                                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                                <div class="bi-star-fill"></div>
+                                                <div class="bi-star-fill"></div>
+                                                <div class="bi-star-fill"></div>
+                                                <div class="bi-star-fill"></div>
+                                                <div class="bi-star-fill"></div>
+                                            </div>
+                                            <!-- Product price-->
+                                            {{ p.price }}원
+                                        </div>
                                     </div>
-                                    <!-- Product price-->
-                                    {{ p.price }}원
+                                    <!-- Product actions-->
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                            </div>
-                        </div>
-                    </div>
+
                     {% endfor %}
 
                 </div>

@@ -39,13 +39,9 @@
     <div class="border-end bg-white" id="sidebar-wrapper">
         <div class="sidebar-heading border-bottom bg-white fw-bolder">SHOP</div>
         <div class="list-group list-group-flush">
-            <a class="list-group-item list-group-item-action list-group-item-light p-3 fw-bold" href="#!">🍱 먹거리</a>
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">👚 패션</a>
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">👜 잡화</a>
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">💎 쥬얼리</a>
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">🧱 인테리어 소품</a>
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">🌱 생활</a>
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">🛒 기타</a>
+            {% for category in categories %}
+            <a class="list-group-item list-group-item-action list-group-item-light p-3 fw-bold" href="{{ category.get_absolute_url }}">{{ category }}</a>
+            {% endfor %}
         </div>
     </div>
     <!-- Page content wrapper-->
