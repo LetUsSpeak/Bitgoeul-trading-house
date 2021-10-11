@@ -3,11 +3,42 @@
 {% load static %}
 {% block content %}
 
+    <style>
+        div.form-group {
+            align-content: center;
+            margin: 50px 0;
+        }
 
+        input[type=text] {
+            margin-left: 35%;
+            width: 400px;
+        }
+
+        input[type=number] {
+            margin-left: 42%;
+            width: 200px;
+        }
+
+        textarea {
+            width: 10px;
+            padding: 100px
+        }
+
+        label {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        input#file-upload-button {
+            background-color: green;
+        }
+
+
+    </style>
 
     <div class="text-center mv-500 m-auto">
-        <div class="m-5">
-            <h4>Create Product</h4>
+        <div class="m-5" style="text-align: left">
+            <h3>제품 등록 페이지</h3>
         </div>
         <div>
             <form action="{% url 'productapp:create' %}"
