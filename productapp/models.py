@@ -5,9 +5,8 @@ from django.db import models
 class Product(models.Model):
     name = models.CharField(max_length=30)                  # 상품 이름
     price = models.IntegerField(default=0)                  # 상품 가격
-    content = models.TextField()                            # 상품 설명
+    market_name = models.CharField(max_length=30, blank=True)
     head_image = models.ImageField(upload_to='productapp/images/%Y/%m/%d/', blank=True)
-    upload_date = models.DateTimeField(auto_now_add=True)   # 상품 게시일
     # writer : 추후 작성 예정
 
     def __str__(self):

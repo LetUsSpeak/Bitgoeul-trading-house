@@ -69,8 +69,6 @@ from accountapp.forms import UserCreationForm
 from accountapp.models import User
 
 
-
-
 class UserCreateView(CreateView):
     model = User
     form_class = UserCreationForm

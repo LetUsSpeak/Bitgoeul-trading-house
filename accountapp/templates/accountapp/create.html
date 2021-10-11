@@ -1,58 +1,49 @@
 {% extends 'marketapp/base.html' %}
 {% load bootstrap4 %}
 {% block content %}
+    {#    <div class="wrapper" style="text-align: center;">#}
+    {#        <h1>회원가입</h1>#}
+    {#        <form method="POST">#}
+    {#            {% csrf_token %}#}
+    {#            {% bootstrap_form form %}#}
+    {#            <input type="submit" class="btn btn-primary" value="Sign Up">#}
+    {#        </form>#}
+    {#    </div>#}
+
     <style>
-    form {
-        background: #212529;
-    }
+        div.form-group {
+            margin: 15px 0;
+        }
+
+        button {
+            margin: 20px 0;
+        }
     </style>
-    <div class="wrapper" style="text-align: center;">
-        <h1>회원가입</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-{#            <div class="content">#}
-{#                <label for="username">사용자 이름</label>#}
-{#                <input#}
-{#                        type="text"#}
-{#                        id="username"#}
-{#                        placeholder="사용자 이름"#}
-{#                        name="username">#}
-{#            </div>#}
-{#            <div class="content">#}
-{#                <label for="id">id</label>#}
-{#                <input#}
-{#                        type="text"#}
-{#                        id="id"#}
-{#                        placeholder="아이디"#}
-{#                        name="id">#}
-{#            </div>#}
-{##}
-{#            <div class="content">#}
-{#                <label for="address">주소</label>#}
-{#                <input#}
-{#                        type="text"#}
-{#                        class="form-control"#}
-{#                        id="address"#}
-{#                        placeholder="주소"#}
-{#                        name="address">#}
-{#            </div>#}
-{#            <div class="content">#}
-{#                <label for="password">비밀번호</label>#}
-{#                <input type="password"#}
-{#                       id="password"#}
-{#                       placeholder="비밀번호"#}
-{#                       name="password">#}
-{#            </div>#}
-{#            <div class="content">#}
-{#                <label for="re_password">비밀번호 확인</label>#}
-{#                <input#}
-{#                        type="password"#}
-{#                        id="re_password"#}
-{#                        placeholder="비밀번호 확인"#}
-{#                        name="re_password">#}
-{#            </div>#}
-            <input type="submit" class="btn btn-primary" value="Sign Up">
-        </form>
+    <div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog"
+         id="modalSignin">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <!-- <h5 class="modal-title">Modal title</h5> -->
+                    <h2 class="fw-bold mb-0">회원가입</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-5 pt-0">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                            제출하기
+                        </button>
+                            {#                        <butoton type="submit" class="btn btn-primary" value="가입하기">#}
+                            {#                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>#}
+
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+
+
 {% endblock %}
