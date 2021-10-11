@@ -1,0 +1,58 @@
+{% extends 'marketapp/base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    <style>
+    form {
+        background: #212529;
+    }
+    </style>
+    <div class="wrapper" style="text-align: center;">
+        <h1>회원가입</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+{#            <div class="content">#}
+{#                <label for="username">사용자 이름</label>#}
+{#                <input#}
+{#                        type="text"#}
+{#                        id="username"#}
+{#                        placeholder="사용자 이름"#}
+{#                        name="username">#}
+{#            </div>#}
+{#            <div class="content">#}
+{#                <label for="id">id</label>#}
+{#                <input#}
+{#                        type="text"#}
+{#                        id="id"#}
+{#                        placeholder="아이디"#}
+{#                        name="id">#}
+{#            </div>#}
+{##}
+{#            <div class="content">#}
+{#                <label for="address">주소</label>#}
+{#                <input#}
+{#                        type="text"#}
+{#                        class="form-control"#}
+{#                        id="address"#}
+{#                        placeholder="주소"#}
+{#                        name="address">#}
+{#            </div>#}
+{#            <div class="content">#}
+{#                <label for="password">비밀번호</label>#}
+{#                <input type="password"#}
+{#                       id="password"#}
+{#                       placeholder="비밀번호"#}
+{#                       name="password">#}
+{#            </div>#}
+{#            <div class="content">#}
+{#                <label for="re_password">비밀번호 확인</label>#}
+{#                <input#}
+{#                        type="password"#}
+{#                        id="re_password"#}
+{#                        placeholder="비밀번호 확인"#}
+{#                        name="re_password">#}
+{#            </div>#}
+            <input type="submit" class="btn btn-primary" value="Sign Up">
+        </form>
+    </div>
+{% endblock %}

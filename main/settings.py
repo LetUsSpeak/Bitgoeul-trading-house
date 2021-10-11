@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'accountapp',
     'marketapp',
     'eventapp',
+    'bootstrap4'
+    ''
 ]
 
 MIDDLEWARE = [
