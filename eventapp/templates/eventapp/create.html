@@ -14,14 +14,9 @@
             width: 400px;
         }
 
-        input[type=number] {
-            margin-left: 42%;
-            width: 200px;
-        }
-
-        textarea {
-            width: 10px;
-            padding: 100px
+        textarea#id_info.form-control {
+            width: 400px;
+            margin-left: 35%;
         }
 
         label {
@@ -61,14 +56,15 @@
             font-size: 10pt;
         }
 
+
     </style>
 
     <div class="text-center mv-500 m-auto">
         <div class="m-5" style="text-align: left">
-            <h3>제품 등록 페이지</h3>
+            <h3>마켓 등록 페이지</h3>
         </div>
-        <div>
-            <form action="{% url 'productapp:create' %}"
+        <div class="text-center mv-500 m-auto">
+            <form action="{% url 'eventapp:create' %}"
                   method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% bootstrap_form form %}
