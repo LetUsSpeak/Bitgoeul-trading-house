@@ -58,12 +58,17 @@
                     <div class="col-md-4"><img class="card-img-top mb-5 mb-md-0" src="{% static 'productapp/img/no_image.png' %}" alt="..." /></div>
                     {% endif %}
                     <div class="col-md-7">
-                        <h3 class="display-7 fw-bolder">{{ product.name }}</h3>
+                        <div class="d-flex">
+                            <h3 class="display-7 fw-bolder">{{ product.name }}</h3>
+                            <h4 class="btn text-black px-3 mx-4 fw-bold" type="button">
+                                | &nbsp &nbsp{{ product.category }}
+                            </h4>
+                        </div>
                         <div class="fs-5 mb-4">
                             <span>&nbsp{{ product.price }}원</span>
                         </div>
                         <p class="lead">{{ product.content }}</p>
-                        <p class="mb-4">등록일 | {{ product.upload_date }}</p>
+                        <p class="mb-4">상호명 | {{ product.market_name }}</p>
                         <div class="d-flex my-2">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                             <button class="btn btn-outline-dark flex-shrink-0" type="button">

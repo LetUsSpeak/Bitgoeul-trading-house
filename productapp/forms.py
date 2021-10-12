@@ -8,3 +8,4 @@ class ProductCreationForm(ModelForm):
     class Meta:
         model = Product
         fields = ['name', 'price', 'market_name', 'head_image']
+
