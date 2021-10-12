@@ -23,3 +23,4 @@ class EventCreateView(CreateView):
 
     def get_success_url(self):
         return reverse('eventapp:event-list')
+

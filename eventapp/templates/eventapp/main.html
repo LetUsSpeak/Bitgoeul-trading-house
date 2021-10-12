@@ -1,8 +1,10 @@
 {% extends 'eventapp/base.html' %}
 {% load static %}
+
 {% block scripts %}
   <script src="{% static 'eventapp/js/main.js' %}" defer></script>
 {% endblock scripts %}
+
 {% block content %}
   {% for obj in object_list %}
     <div class="col">
