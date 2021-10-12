@@ -122,5 +122,5 @@
 
 <h3>💛 첨부 자료</h3>
 
-- 유튜브(시연 영상) : https://www.youtube.com/watch?v=fsj70WkJ4yI
-- 구글 드라이브(모델 생성) : https://drive.google.com/drive/folders/1Hynxwdq9hT8a-PnZGbZeiA2TbM63sGoY?usp=sharing
+- **유튜브(시연 영상) :** https://www.youtube.com/watch?v=fsj70WkJ4yI
+- **구글 드라이브(모델 생성) :** https://drive.google.com/drive/folders/1Hynxwdq9hT8a-PnZGbZeiA2TbM63sGoY?usp=sharing
