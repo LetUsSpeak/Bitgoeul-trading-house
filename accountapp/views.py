@@ -8,7 +8,7 @@
 # # #
 # # #
 # # # class AccountCreateView(CreateView):
-# # #     model = User
+# # #     models = User
 # # #     form_class = UserCreationForm
 # # #     template_name = 'accountapp/create.html'
 # # #
