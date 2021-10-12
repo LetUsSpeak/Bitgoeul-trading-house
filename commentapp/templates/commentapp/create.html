@@ -1,17 +1,17 @@
 {% load bootstrap4 %}
 
-    <div class="text-center mv-500 m-auto">
+    <div class="text-center mv-500 m-auto bg-light p-4">
         <div class="m-5">
             <h4>Create Comment</h4>
         </div>
-        <div>
+        <div style="display: inline-block">
             <form action="{%  url 'commentapp:result' %}">
-                <textarea name="fulltext" cols="30" rows="10">
+                <textarea style="horiz-align: center" class="d-flex my-3" name="fulltext" cols="100" rows="10">
 
                 </textarea>
-
-                <input type="submit" value="제출하기기">
-
+                <div>
+                    <button class="btn bg-dark p-2 rounded-5 text-white" type="submit">리뷰 작성</button>
+                </div>
             </form>
         </div>
     </div>

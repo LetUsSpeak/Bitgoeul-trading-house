@@ -1,1 +1,73 @@
-<h2>ouput : {{ output }}</h2>
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>빛고을상회⚡</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'productapp/css/side_styles.css' %}" rel="stylesheet"/>
+    <link href="{% static 'productapp/css/shop_styles.css' %}" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet&display=swap" rel="stylesheet">
+
+    <style>
+        @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+        * {
+            font-family: 'NanumSquare', sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+        <a style="font-family: 'Hahmlet', serif;" class="navbar-brand" href="{% url 'marketapp:main' %}">빛고을상회</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="{% url 'marketapp:main' %}">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'eventapp:event-list' %}">MARKET</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'productapp:list' %}">SHOP</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <section class="py-2">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center text-center py-5">
+                    {% if output == '긍정' %}
+                        <h1 style="margin-bottom: 20px" class="fw-bold">💗 좋은 리뷰 남겨주셔서 감사합니다! 💗</h1>
+                        <h2>판매자가 이 리뷰를 좋아합니다 🥰</h2>
+                    {% else %}
+                        <h1 style="margin-bottom: 20px" class="fw-bold">🔥 피드백 감사합니다! 🔥</h1>
+                        <h2>다음 번에는 만족할 상품을 준비하겠습니다. 찾아주셔서 감사해요 🤗</h2>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </div>
+</div>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="{% static 'productapp/js/side_scripts.js' %}"></script>
+<script src="{% static 'productapp/js/shop_scripts.js' %}"></script>
+</body>
+</html>

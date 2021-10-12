@@ -1,13 +1,15 @@
+import pandas as pd
 from django.shortcuts import render
 
 # Create your views here.
 from django.urls import reverse
 from django.views.generic import ListView, DetailView, CreateView
-from django.views.generic.edit import FormMixin
+from gensim.models import Doc2Vec
 
 from productapp.forms import ProductCreationForm
 from productapp.models import Product, Category
 from reviewapp.forms import ReviewCreationForm
+
 
 
 class ProductList(ListView):
@@ -20,11 +22,11 @@ class ProductList(ListView):
         return context
 
 
-class ProductDetail(DetailView):
+class ProductDetailView(DetailView):
     model = Product
-    # form_class = ReviewCreationForm
-    # context_object_name = 'target_product'
-    # template_name = 'productapp/product_detail.html'
+    form_class = ReviewCreationForm
+    context_object_name = 'target_product'
+    template_name = 'productapp/product_detail.html'
 
 
 class ProductCreateView(CreateView):
@@ -128,3 +130,27 @@ def category_result(full):
     output = score.argmax() if score.max() > 0.22 else 6
     output += 1
     return output
+
+def similar(request, id):
+    df = pd.read_pickle('data/original_data.pkl')
+    model = Doc2Vec.load('models/similar_model')
+    id = id
+    name = ''.join(df[df['id'] == id]['name'])
+    label = int(df[df['id'] == id]['label'])
+
+    # name = name
+    # id = int(df[df['name'] == name]['id'])
+    # label = int(df[df['name'] == name]['label'])
+
+    similar = model.docvecs.most_similar(str(id), topn=15)
+
+    sim_ids= []
+    sim_names = []
+    for sim in similar:
+        sim_id = int(sim[0])
+        sim_name = ''.join(df[df['id'] == sim_id]['name'])
+        sim_label = int(df[df['id'] == sim_id]['label'])
+        if label == sim_label:
+            sim_ids.append(sim_id)
+            sim_names.append(sim_name)
+    return render(request, 'productapp/result.html', {'search_sent': name, 'name': sim_names})
