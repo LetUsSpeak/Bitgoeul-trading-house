@@ -26,7 +26,7 @@ class ProductCreateView(CreateView):
     model = Product
     form_class = ProductCreationForm
     template_name = 'productapp/create.html'
-
+    # model.category_id = 2
     # def form_valid(self, form):
     #     form.instance.writer = self.request.user
     #     return super().form_valid(form)
