@@ -116,7 +116,7 @@
 <div markdown="3">
 <br> 
     
-![kakao](https://user-images.githubusercontent.com/64680512/137017604-6498eb5b-24ee-42c0-9a96-5b3b94b903ba.png)
+<img src="https://user-images.githubusercontent.com/64680512/137017604-6498eb5b-24ee-42c0-9a96-5b3b94b903ba.png" width="150" height="200" />
 
 - 이용자가 등록한 지역 정보, 관심 카테고리 등으로 원하는 장터/상품에 대한 소식을 챗봇을 통해 확인
 
