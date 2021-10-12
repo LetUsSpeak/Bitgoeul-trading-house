@@ -1,6 +1,8 @@
 # ⚡ 빛고을상회 ⚡
 ### 👛 온라인 플리마켓 플랫폼 👜
 
+![main](https://user-images.githubusercontent.com/64680512/137018517-5a3cc061-7ae9-4228-b71f-006ef4f26adf.png)
+
 <br>
 
 - ### 🔍프로젝트 동기🔍
@@ -100,7 +102,7 @@
 <div markdown="2">
 <br>
     
-![meta1](https://user-images.githubusercontent.com/64680512/137016976-92e8317f-6729-4568-90ab-b935269dfbd7.png)
+![meta2](https://user-images.githubusercontent.com/64680512/137016979-9f1bc6e7-8244-4038-9d05-7f9d61d94de6.png)
     
 - 장터 등록 /상품 판매를 위해 필요한 필수 기능 구축
 - ZEPETO Build-it을 통해 가상의 장터 공간 구축
@@ -113,6 +115,8 @@
 <summary>🤖지역 챗봇 알림 서비스🤖</summary>
 <div markdown="3">
 <br> 
+    
+![kakao](https://user-images.githubusercontent.com/64680512/137017604-6498eb5b-24ee-42c0-9a96-5b3b94b903ba.png)
 
 - 이용자가 등록한 지역 정보, 관심 카테고리 등으로 원하는 장터/상품에 대한 소식을 챗봇을 통해 확인
 
