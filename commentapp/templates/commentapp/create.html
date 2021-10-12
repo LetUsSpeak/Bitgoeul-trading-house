@@ -1,0 +1,17 @@
+{% load bootstrap4 %}
+
+    <div class="text-center mv-500 m-auto">
+        <div class="m-5">
+            <h4>Create Comment</h4>
+        </div>
+        <div>
+            <form action="{%  url 'commentapp:result' %}">
+                <textarea name="fulltext" cols="30" rows="10">
+
+                </textarea>
+
+                <input type="submit" value="제출하기기">
+
+            </form>
+        </div>
+    </div>

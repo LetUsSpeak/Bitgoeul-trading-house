@@ -3,9 +3,11 @@ from django.shortcuts import render
 # Create your views here.
 from django.urls import reverse
 from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic.edit import FormMixin
 
 from productapp.forms import ProductCreationForm
 from productapp.models import Product, Category
+from reviewapp.forms import ReviewCreationForm
 
 
 class ProductList(ListView):
@@ -20,6 +22,9 @@ class ProductList(ListView):
 
 class ProductDetail(DetailView):
     model = Product
+    # form_class = ReviewCreationForm
+    # context_object_name = 'target_product'
+    # template_name = 'productapp/product_detail.html'
 
 
 class ProductCreateView(CreateView):

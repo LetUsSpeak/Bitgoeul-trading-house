@@ -22,7 +22,7 @@ def metaverse(request):
 
 
 def kakao(request):
-    with open('data/token.txt', encoding='utf-8') as txtfile:
+    with open('private/token.txt', encoding='utf-8') as txtfile:
         for row in txtfile.readlines():
             token = row
     url = "https://kapi.kakao.com/v2/api/talk/memo/default/send"
