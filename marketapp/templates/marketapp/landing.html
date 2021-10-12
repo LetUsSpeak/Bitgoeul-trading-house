@@ -7,8 +7,8 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center my-5">
-                            <h1 class="display-5 fw-bolder text-white mb-2">플리마켓 카운트다운</h1>
-                            <p class="lead text-white-50 mb-4 my-4">플리마켓 이름</p>
+                            <p style="font-family: 'Hahmlet', serif;" class="display-5 fw-bolder text-white mb-2 ">빛고을상회</p>
+                            <p style="font-family: 'Hahmlet', serif;" class="lead text-white-50 mb-4 my-4">온라인 플리마켓 플랫폼</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center my-5">
                                 <a style="background: #fd7e14;" class="btn text-white btn-lg px-4 me-sm-3" href="{% url 'eventapp:create' %}">마켓 등록하기</a>
                                 <a class="btn btn-outline-light btn-lg px-4" href="{% url 'eventapp:event-list' %}">마켓 둘러보기</a>
@@ -54,78 +54,9 @@
             </div>
         </section>
 
-        <!-- Contact section-->
-        <section class="bg-light py-5 border-bottom" id="registerMarket">
-            <div class="container px-5 my-5 px-5">
-                <div class="text-center mb-5">
-                    <div style="background: #fd7e14;" class="feature bg-gradient text-white rounded-3 mb-3"><i class="bi bi-shop"></i></div>
-                    <h2 class="fw-bolder">마켓 등록</h2>
-                    <p class="lead mb-0 my-3">지역에서 열리는 장터를 등록하세요!</p>
-                </div>
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="market-name" type="text" placeholder="Ex) 푸른길 상생 마켓" data-sb-validations="required" />
-                                <label for="market-name">마켓 이름</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">마켓명을 등록해주세요.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="market-info" type="text" placeholder="Ex) 오나라" data-sb-validations="required,email" />
-                                <label for="market-info">마켓 담당자 정보 입력</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">담당자 정보를 입력해주세요.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">값이 유효하지 않습니다.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="market-term" type="tel" placeholder="Ex) 2021.10.14-2021.10.21" data-sb-validations="required" />
-                                <label for="market-term">마켓 운영 기간</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">마켓 운영 기간을 입력해주세요.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="market-detail" type="text" placeholder="Ex) 2021.10.14-2021.10.21" style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="market-detail">마켓 소개</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">마켓을 소개해주세요.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button style="background: #fd7e14;" class="btn text-white btn-lg disabled" id="submitButton" type="submit">마켓 등록하기</button></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-
-
-        <!-- Testimonials section-->
-        <section class="py-5 border-bottom">
+    <!-- Testimonials section-->
+        <section class="bg-light py-5 border-bottom">
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
                     <h2 class="fw-bolder">믿을만한 사용자 리뷰</h2>
@@ -151,7 +82,7 @@
                                 <div class="d-flex">
                                     <div class="flex-shrink-0"><i style="color: #fd7e14;" class="bi bi-emoji-angry-fill fs-1"></i></div>
                                     <div class="ms-4">
-                                        <p class="mb-1">완전 빛 좋은 개살구네요.. 가격에 비해 품질이 너무 별로여서 아쉬울 따름입니다. 전반적인 서비스도 불만족스럽네요. 재구매 의사 당연히 없어요.</p>
+                                        <p class="mb-1">가격에 비해 품질이 너무 별로여서 아쉬울 따름입니다. 전반적인 서비스도 불만족스럽네요. 재구매 의사 당연히 없어요.</p>
                                         <div class="small text-muted my-2">- OOO씨, 대전광역시</div>
                                     </div>
                                 </div>
