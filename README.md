@@ -99,7 +99,9 @@
 <summary>🎡메타버스 온라인 플리마켓🎡</summary>
 <div markdown="2">
 <br>
+    
 ![meta1](https://user-images.githubusercontent.com/64680512/137016976-92e8317f-6729-4568-90ab-b935269dfbd7.png)
+    
 - 장터 등록 /상품 판매를 위해 필요한 필수 기능 구축
 - ZEPETO Build-it을 통해 가상의 장터 공간 구축
 - 메타버스 가상공간에 플리마켓 환경이 실제로 구축되어 있어서 현실감과 유대감을 조성
